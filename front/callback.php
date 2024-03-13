@@ -34,7 +34,8 @@ error_reporting(E_ALL);
 
 include('../../../inc/includes.php');
 
-$provider_id = PluginSinglesignonToolbox::getCallbackParameters('provider');
+//hardcoding provider_id to azure provider until we fix the issue with getCallbackParameters returning null here
+$provider_id = 1;//PluginSinglesignonToolbox::getCallbackParameters('provider');
 
 if (!$provider_id) {
    Html::displayErrorAndDie(__sso("Provider not defined."), false);
